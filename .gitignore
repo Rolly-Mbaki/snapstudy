@@ -1,0 +1,27 @@
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE configuration files
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore build and generated files
+build/
+dist/
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore editor-specific files
+*.swp
+*.swo
+
+# Ignore environment variables
+.env
+
+# Ignore package lock files (optional)
+package-lock.json
+yarn.lock
