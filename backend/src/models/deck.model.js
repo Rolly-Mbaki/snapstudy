@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { type } from "os";
 
 const deckSchema = new mongoose.Schema({
     name: {
