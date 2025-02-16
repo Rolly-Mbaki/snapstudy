@@ -6,14 +6,21 @@ import deckRoutes from './routes/deck.route.js'
 // import cardRoutes from './routes/card.route.js'
 import { connectDB } from './lib/db.js'
 import { clerkMiddleware } from '@clerk/express'
+import cors from 'cors'
 
 dotenv.config()
 
 const app = express()
 const PORT = process.env.PORT
 
-app.use(express.json())
+app.use(cors(
+    {
+        origin: "http://localhost:3000",
+        credentials: true
+    }
+))
 
+app.use(express.json())
 app.use(clerkMiddleware()) // adds auth to req obj
 
 app.use("/api/users", userRoutes)
